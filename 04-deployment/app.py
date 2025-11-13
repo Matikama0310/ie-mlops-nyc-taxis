@@ -30,7 +30,7 @@ class RideRequest(BaseModel):
     DOLocationID: int = Field(..., ge=1, description="Dropoff Location ID")
     trip_distance: float = Field(..., gt=0, description="Trip distance in miles")
 
-    class Config:
+    class ConfigDict:
         json_schema_extra = {
             "example": {
                 "PULocationID": 138,
